@@ -4,17 +4,20 @@ import {
   BrowserRouter as BR,
   Route as R,
   Switch,
-  Link
+  Link,
+  useParams
 } from "react-router-dom";
 import {
   Container,
   Nav,
   Navbar,
-  NavItem,
-  NavbarBrand,
-  NavLink,
   Jumbotron,
-  Table
+  Table,
+  Col,
+  Row,
+  Form,
+  FormGroup,
+  Button
 } from "react-bootstrap";
 import Login from "./login.js";
 function App() {
@@ -36,6 +39,14 @@ function App() {
                 <R exact path={`/arrivals`}>
                   <Jumbotr value={"arrivals"}></Jumbotr>
                   <Arrivals></Arrivals>
+                </R>
+                <R exact path={`/add`}>
+                  <Jumbotr value={"add"}></Jumbotr>
+                  <Add></Add>
+                </R>
+                <R exact path={`/updateguests/:roomnumber`}>
+                  <Jumbotr value={"update"}></Jumbotr>
+                  <UpdateGuests></UpdateGuests>
                 </R>
                 <R>
                   <NoMatch></NoMatch>
@@ -73,15 +84,19 @@ const Arrivals = () => {
           <th>#</th>
           <th>Guest Name</th>
           <th>Room</th>
+          <th>Update</th>
         </tr>
       </thead>
       <tbody>
         {guests.map((guest, i) => {
           return (
-            <tr>
-              <td>1</td>
+            <tr key={i}>
+              <td>{i}</td>
               <td>{guest.name}</td>
               <td>{guest.room}</td>
+              <td>
+                <Link to={`updateguests/${guest.room}`}>Update Guest</Link>
+              </td>
             </tr>
           );
         })}
@@ -89,10 +104,87 @@ const Arrivals = () => {
     </Table>
   );
 };
+export const Add = props => {
+  let [success, setSuccess] = useState(false);
+  let url = "";
+  console.log(props.value + " === rpops value");
+  console.log(props.roomnumber + " === rpops roomnumber");
+
+  props.value === "update"
+    ? (url = "http://localhost:8080/updateguests")
+    : (url = "http://localhost:8080/addguests");
+  console.log(url);
+  return (
+    <Container>
+      {success ? (
+        <div>
+          <label>successfully saved</label>
+          <Link to="/arrivals"> Add Guest </Link>
+        </div>
+      ) : (
+        <Form>
+          <FormGroup as={Row}>
+            <FormGroup as={Col}>
+              <Form.Label value="name">name</Form.Label>
+              <Form.Control type="text" id="add-name"></Form.Control>
+            </FormGroup>
+            <FormGroup as={Col}>
+              <Form.Label value="room type">room type</Form.Label>
+              <Form.Control as="select" id="add-room-type">
+                <option>Deluxe</option>
+                <option>Honey Moon</option>
+                <option>Tree Top</option>
+              </Form.Control>
+            </FormGroup>
+          </FormGroup>
+          <FormGroup as={Row}>
+            <FormGroup as={Col}>
+              <Form.Label>address</Form.Label>
+              <Form.Control
+                as="textarea"
+                id="add-address"
+                row={3}
+              ></Form.Control>
+            </FormGroup>
+            <FormGroup as={Col}>
+              <Form.Label>email</Form.Label>
+              <Form.Control type="email" id="add-email"></Form.Control>
+            </FormGroup>
+          </FormGroup>
+          <Button
+            variant="primary"
+            onClick={() => {
+              fetch(url, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  name: document.getElementById("add-name").value,
+                  roomType: document.getElementById("add-room-type").value,
+                  address: document.getElementById("add-address").value,
+                  email: document.getElementById("add-email").value,
+                  room: props.roomnumber
+                })
+              }).then(res => {
+                if (res.ok) {
+                  setSuccess(true);
+                }
+              });
+            }}
+          >
+            submit
+          </Button>
+        </Form>
+      )}
+    </Container>
+  );
+};
 export const Prepare = () => <div>Prepare Tab </div>;
 export const NoMatch = () => <div>Page not found for given path</div>;
 export const NoLogin = () => <div>Not Logged In</div>;
-
+export const UpdateGuests = props => {
+  let { roomnumber } = useParams();
+  return <Add value="update" roomnumber={roomnumber}></Add>;
+};
 export const Layout = props => <Container>{props.children}</Container>;
 export const Navigation = props => {
   const styles = { color: "pink", backgroundColor: "grey" };
@@ -114,6 +206,11 @@ export const Navigation = props => {
               Arrivals
             </Nav.Link>
           </Nav.Item>
+          <Nav.Item>
+            <Nav.Link style={styles} href="/add">
+              Add
+            </Nav.Link>
+          </Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
@@ -125,15 +222,20 @@ export const Jumbotr = props => (
   <Jumbotron fluid className="Jumbotron">
     <div className="overlay"> </div>
     {props.value === "arrivals" ? (
-      <div>
+      <Container>
         <h1>Guest List Arrivals</h1>
         <p>List of guests to check-in today</p>
-      </div>
+      </Container>
+    ) : props.value === "add" ? (
+      <Container>
+        <h1>Add Guest</h1>
+        <p>Booking Room</p>
+      </Container>
     ) : (
-      <div>
+      <Container>
         <h1>Guest List Prepare</h1>
         <p>List of guests to check-in in future</p>
-      </div>
+      </Container>
     )}
   </Jumbotron>
 );
