@@ -4,8 +4,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Guests {
-	String name;
-	Integer room;
+	private String name;
+	private Integer room;
 
 	public Guests() {
 		super();

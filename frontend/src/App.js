@@ -107,13 +107,10 @@ const Arrivals = () => {
 export const Add = props => {
   let [success, setSuccess] = useState(false);
   let url = "";
-  console.log(props.value + " === rpops value");
-  console.log(props.roomnumber + " === rpops roomnumber");
 
   props.value === "update"
     ? (url = "http://localhost:8080/updateguests")
     : (url = "http://localhost:8080/addguests");
-  console.log(url);
   return (
     <Container>
       {success ? (

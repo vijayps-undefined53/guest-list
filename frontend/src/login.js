@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import GuestList from "./guestlist.js";
-import { Container as C, Row, Col, Form, Button } from "react-bootstrap";
+import { Container as C, Row, Form, Button } from "react-bootstrap";
 function Login() {
   let [loginstatus, setloginstatus] = useState(false);
   const user = document.getElementById("username");
@@ -20,7 +20,6 @@ function Login() {
     );
     let status = await login.status;
     setloginstatus(status === 200);
-    console.log(loginstatus);
   };
   return (
     <React.Fragment>

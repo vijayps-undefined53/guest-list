@@ -8,14 +8,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class AddGuests {
 	@NotEmpty(message = "Guest's Name  shouldn't be Empty")
-	String name;
+	private String name;
 	@NotEmpty(message = "Room Type  shouldn't be Empty")
-	String roomType;
+	private String roomType;
 	@NotEmpty(message = "Address shouldn't be Empty")
-	String address;
+	private String address;
 	@Email(message = "{email}")
-	String email;
-	Integer room;
+	private String email;
+	private Integer room;
 
 	public AddGuests(String name, String roomType, String address, String email) {
 		super();

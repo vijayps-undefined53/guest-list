@@ -20,7 +20,7 @@ import com.guestlist.guestlist_artifact.Model.Guests;
 @RestController
 public class GuestListController {
 	@Autowired
-	GuestListService guestListService;
+	private GuestListService guestListService;
 
 	@RequestMapping(value = "/arrivals", method = RequestMethod.GET)
 	public ResponseEntity<List<Guests>> arrivals() {
