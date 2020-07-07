@@ -19,7 +19,57 @@ import {
   FormGroup,
   Button
 } from "react-bootstrap";
-import Login from "./login.js";
+import GuestList from "./guestlist.js";
+function Login() {
+  let [loginstatus, setLoginstatus] = useState(false);
+  let [username, setUsername] = useState("");
+  let [pass, setPass] = useState("");
+  useEffect(() => {
+    s();
+  });
+  const s = async () => {
+    let login = await fetch(
+      `http://localhost:8080/login/?name=${username}&password=${pass}`
+    )
+      .then(res => res)
+      .then(res => {
+        if (res.status === 200) {
+          setLoginstatus(true);
+        } else {
+          alert("Incorrect Password, check test db for configured password");
+        }
+      });
+  };
+  return (
+    <React.Fragment>
+      {!loginstatus ? (
+        <Container>
+          <Form>
+            <Form.Group as={Row}>
+              <Form.Label>username</Form.Label>
+              <Form.Control type="text" id="username"></Form.Control>
+            </Form.Group>
+            <Form.Group as={Row}>
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" id="password"></Form.Control>
+            </Form.Group>
+            <Button
+              variant="primary"
+              onClick={() => {
+                setUsername(document.getElementById("username").value);
+                setPass(document.getElementById("password").value);
+              }}
+            >
+              login
+            </Button>
+          </Form>
+        </Container>
+      ) : (
+        <GuestList value={loginstatus}></GuestList>
+      )}
+    </React.Fragment>
+  );
+}
 function App() {
   return (
     <React.Fragment>

@@ -14,4 +14,7 @@ public interface GuestListService {
 	int addGuests(AddGuests addGuests);
 
 	int updateGuests(AddGuests addGuests);
+
+	Guests getGuestsByName(String name);
+
 }

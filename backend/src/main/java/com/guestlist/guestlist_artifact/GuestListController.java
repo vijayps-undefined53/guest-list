@@ -12,6 +12,7 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.guestlist.guestlist_artifact.Model.AddGuests;
@@ -48,5 +49,13 @@ public class GuestListController {
 		int addguests = guestListService.updateGuests(addGuests);
 		return addguests == 1 ? new ResponseEntity<Boolean>(HttpStatus.OK)
 				: new ResponseEntity<Boolean>(HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+
+	@RequestMapping(value = "/getGuestByName", method = RequestMethod.GET, produces = "application/json")
+	public ResponseEntity<Guests> getGuestByName(
+			@Valid @NotNull(message = "querying using name, name expected") @RequestParam String name) {
+		Guests guest = guestListService.getGuestsByName(name);
+		return guest != null ? new ResponseEntity<Guests>(guest, HttpStatus.OK)
+				: new ResponseEntity<Guests>(HttpStatus.NO_CONTENT);
 	}
 }

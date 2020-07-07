@@ -30,4 +30,9 @@ public class GuestListServiceImpl implements GuestListService {
 	public int updateGuests(AddGuests addGuests) {
 		return guestListDao.updateGuests(addGuests);
 	}
+
+	@Override
+	public Guests getGuestsByName(String name) {
+		return guestListDao.getGuestsByName(name);
+	}
 }
