@@ -40,6 +40,7 @@ public class GuestListController {
 
 	@RequestMapping(value = "/addguests", method = RequestMethod.POST, produces = "application/json")
 	public ResponseEntity<Boolean> addGuests(@Valid @NotNull @RequestBody AddGuests addGuests) {
+		System.out.println("/addguests");
 		return guestListService.addGuests(addGuests) == 1 ? new ResponseEntity<Boolean>(HttpStatus.OK)
 				: new ResponseEntity<Boolean>(HttpStatus.INTERNAL_SERVER_ERROR);
 	}
@@ -57,5 +58,13 @@ public class GuestListController {
 		Guests guest = guestListService.getGuestsByName(name);
 		return guest != null ? new ResponseEntity<Guests>(guest, HttpStatus.OK)
 				: new ResponseEntity<Guests>(HttpStatus.NO_CONTENT);
+	}
+
+	@RequestMapping(value = "/deleteGuestByName", method = RequestMethod.DELETE, produces = "application/json")
+	public ResponseEntity<String> deleteGuestByName(
+			@Valid @NotNull(message = "delete using name, name expected") @RequestParam String name) {
+		int deleted = guestListService.deleteGuests(name);
+		return deleted == 1 ? new ResponseEntity<String>("Guest Deleted", HttpStatus.OK)
+				: new ResponseEntity<String>("No guest with this name found", HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 }

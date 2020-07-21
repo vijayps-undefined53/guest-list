@@ -9,6 +9,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.guestlist.guestlist_artifact.Model.AddGuests;
 import com.guestlist.guestlist_artifact.Model.Guests;
@@ -79,5 +80,17 @@ public class GuestListDaoImpl extends JdbcGenericDao implements GuestListDao {
 		return getNamedParameterJdbcTemplate().update(
 				"update guests set name = :name, roomtype=:roomtype,address =:address,email =:email where room=:room",
 				params);
+	}
+
+	@Transactional
+	@Override
+	public int deleteGuests(String name) {
+		GuestsEntity guestsEntity = guestListRepo.findByName(name);
+		if (guestsEntity != null) {
+			guestListRepo.delete(guestsEntity);
+			return 1;
+		} else {
+			return 0;
+		}
 	}
 }

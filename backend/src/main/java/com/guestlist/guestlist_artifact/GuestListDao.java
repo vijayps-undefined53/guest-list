@@ -13,4 +13,6 @@ public interface GuestListDao {
 	int updateGuests(AddGuests addGuests);
 
 	Guests getGuestsByName(String name);
+
+	int deleteGuests(String name);
 }
