@@ -17,4 +17,6 @@ public interface GuestListService {
 
 	Guests getGuestsByName(String name);
 
+	int deleteGuests(String name);
+
 }

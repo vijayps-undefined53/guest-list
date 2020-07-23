@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.CollectionUtils;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.guestlist.guestlist_artifact.Model.AddGuests;
 import com.guestlist.guestlist_artifact.Model.Guests;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class GuestListController {
 	@Autowired
@@ -40,7 +42,8 @@ public class GuestListController {
 
 	@RequestMapping(value = "/addguests", method = RequestMethod.POST, produces = "application/json")
 	public ResponseEntity<Boolean> addGuests(@Valid @NotNull @RequestBody AddGuests addGuests) {
-		return guestListService.addGuests(addGuests) == 1 ? new ResponseEntity<Boolean>(HttpStatus.OK)
+		int add = guestListService.addGuests(addGuests);
+		return add == 1 ? new ResponseEntity<Boolean>(HttpStatus.OK)
 				: new ResponseEntity<Boolean>(HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
@@ -57,5 +60,13 @@ public class GuestListController {
 		Guests guest = guestListService.getGuestsByName(name);
 		return guest != null ? new ResponseEntity<Guests>(guest, HttpStatus.OK)
 				: new ResponseEntity<Guests>(HttpStatus.NO_CONTENT);
+	}
+
+	@RequestMapping(value = "/deleteGuestByName", method = RequestMethod.DELETE, produces = "application/json")
+	public ResponseEntity<String> deleteGuestByName(
+			@Valid @NotNull(message = "delete using name, name expected") @RequestParam String name) {
+		int deleted = guestListService.deleteGuests(name);
+		return deleted == 1 ? new ResponseEntity<String>("Guest Deleted", HttpStatus.OK)
+				: new ResponseEntity<String>("No guest with this name found", HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 }
