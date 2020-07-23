@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.CollectionUtils;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.guestlist.guestlist_artifact.Model.AddGuests;
 import com.guestlist.guestlist_artifact.Model.Guests;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class GuestListController {
 	@Autowired

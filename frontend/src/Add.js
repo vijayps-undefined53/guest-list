@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { Container, Col, Row, Form, FormGroup, Button } from "react-bootstrap";
 import add_guest_action from "./Actions/add_guest_action";
 import { connect } from "react-redux";
@@ -11,10 +11,7 @@ class Add extends Component {
     return (
       <Container>
         {this.props.success ? (
-          <div>
-            <label>successfully saved</label>
-            <Link to="/arrivals"> Add Guest </Link>
-          </div>
+          <Redirect to="/arrivals"> </Redirect>
         ) : (
           <Form>
             <FormGroup as={Row}>
