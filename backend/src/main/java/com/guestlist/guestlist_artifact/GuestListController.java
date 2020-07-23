@@ -40,8 +40,8 @@ public class GuestListController {
 
 	@RequestMapping(value = "/addguests", method = RequestMethod.POST, produces = "application/json")
 	public ResponseEntity<Boolean> addGuests(@Valid @NotNull @RequestBody AddGuests addGuests) {
-		System.out.println("/addguests");
-		return guestListService.addGuests(addGuests) == 1 ? new ResponseEntity<Boolean>(HttpStatus.OK)
+		int add = guestListService.addGuests(addGuests);
+		return add == 1 ? new ResponseEntity<Boolean>(HttpStatus.OK)
 				: new ResponseEntity<Boolean>(HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 

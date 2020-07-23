@@ -3,6 +3,7 @@ import "./App.css";
 import Login from "./Login";
 import Add from "./Add";
 import Arrivals from "./Arrivals";
+import DeleteGuest from "./DeleteGuest";
 import {
   BrowserRouter as BR,
   Route as R,
@@ -34,9 +35,16 @@ function App() {
                   <Jumbotr value={"add"}></Jumbotr>
                   <Add value="add"></Add>
                 </R>
-                <R exact path={`/updateguests/:roomnumber`}>
+                <R
+                  exact
+                  path={`/updateguests/:roomnumber/:name/:address/:email`}
+                >
                   <Jumbotr value={"update"}></Jumbotr>
                   <UpdateGuests></UpdateGuests>
+                </R>
+                <R exact path={`/deleteGuestByName/:name`}>
+                  <Jumbotr value={"arrivals"}></Jumbotr>
+                  <DeleteGuestsPasser></DeleteGuestsPasser>
                 </R>
                 <R>
                   <NoMatch></NoMatch>
@@ -53,8 +61,21 @@ export const Prepare = () => <div>Prepare Tab </div>;
 export const NoMatch = () => <div>Page not found for given path</div>;
 export const NoLogin = () => <div>Not Logged In</div>;
 export const UpdateGuests = props => {
-  let { roomnumber } = useParams();
-  return <Add value="update" roomnumber={roomnumber}></Add>;
+  let { roomnumber, name, address, email } = useParams();
+
+  return (
+    <Add
+      value="update"
+      roomnumber={roomnumber}
+      name={name}
+      address={address}
+      email={email}
+    ></Add>
+  );
+};
+export const DeleteGuestsPasser = () => {
+  let { name } = useParams();
+  return <DeleteGuest name={name}></DeleteGuest>;
 };
 export const Layout = props => <Container>{props.children}</Container>;
 export const Navigation = props => {

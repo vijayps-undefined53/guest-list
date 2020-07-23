@@ -17,6 +17,7 @@ class Arrivals extends Component {
             <th>Guest Name</th>
             <th>Room</th>
             <th>Update</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -27,7 +28,16 @@ class Arrivals extends Component {
                 <td>{guest.name}</td>
                 <td>{guest.room}</td>
                 <td>
-                  <Link to={`updateguests/${guest.room}`}>Update Guest</Link>
+                  <Link
+                    to={`updateguests/${guest.room}/${guest.name}/${guest.address}/${guest.email}/${guest.roomtype}`}
+                  >
+                    Update Guest
+                  </Link>
+                </td>
+                <td>
+                  <Link to={`/deleteGuestByName/${guest.name}`}>
+                    Delete {guest.name}
+                  </Link>
                 </td>
               </tr>
             );

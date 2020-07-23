@@ -15,7 +15,10 @@ const add_guest_action = roomnumber => {
           })
         })
           .then(res => res)
-          .then(res => (response = res.status === 200))
+          .then(res => {
+            console.log(res);
+            response = res.status === 200;
+          })
       : await fetch("http://localhost:8080/addguests", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -27,7 +30,10 @@ const add_guest_action = roomnumber => {
           })
         })
           .then(res => res)
-          .then(res => (response = res.status === 200));
+          .then(res => {
+            console.log(res);
+            response = res.status === 200;
+          });
     dispatch({ type: "add_guest_action", payload: response });
   };
 };

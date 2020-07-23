@@ -20,7 +20,12 @@ class Add extends Component {
             <FormGroup as={Row}>
               <FormGroup as={Col}>
                 <Form.Label value="name">name</Form.Label>
-                <Form.Control type="text" id="add-name"></Form.Control>
+                <Form.Control
+                  type="text"
+                  id="add-name"
+                  placeholder={this.props.name}
+                  contentEditable="true"
+                ></Form.Control>
               </FormGroup>
               <FormGroup as={Col}>
                 <Form.Label value="room type">room type</Form.Label>
@@ -38,11 +43,22 @@ class Add extends Component {
                   as="textarea"
                   id="add-address"
                   row={3}
+                  placeholder={this.props.address}
+                  contentEditable="true"
                 ></Form.Control>
               </FormGroup>
               <FormGroup as={Col}>
                 <Form.Label>email</Form.Label>
-                <Form.Control type="email" id="add-email"></Form.Control>
+                <Form.Control
+                  type="email"
+                  id="add-email"
+                  placeholder={
+                    this.props.email
+                      ? this.props.email
+                      : "example_email@email.com (email validation in backend)"
+                  }
+                  contentEditable="true"
+                ></Form.Control>
               </FormGroup>
             </FormGroup>
             <Button
