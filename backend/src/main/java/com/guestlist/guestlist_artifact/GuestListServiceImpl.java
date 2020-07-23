@@ -35,4 +35,9 @@ public class GuestListServiceImpl implements GuestListService {
 	public Guests getGuestsByName(String name) {
 		return guestListDao.getGuestsByName(name);
 	}
+
+	@Override
+	public int deleteGuests(String name) {
+		return guestListDao.deleteGuests(name);
+	}
 }

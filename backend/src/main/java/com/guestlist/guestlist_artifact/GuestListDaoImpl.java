@@ -9,6 +9,8 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.CollectionUtils;
 
 import com.guestlist.guestlist_artifact.Model.AddGuests;
 import com.guestlist.guestlist_artifact.Model.Guests;
@@ -22,7 +24,7 @@ public class GuestListDaoImpl extends JdbcGenericDao implements GuestListDao {
 	public List<Guests> getGuests() {
 		List<Guests> guestlist = new ArrayList<>();
 		guestListRepo.findAll().forEach(g -> {
-			guestlist.add(new Guests(g.getName(), g.getRoom()));
+			guestlist.add(new Guests(g.getName(), g.getRoom(), g.getRoomtype(), g.getAddress(), g.getEmail()));
 		});
 		return guestlist;
 		/*
@@ -50,8 +52,11 @@ public class GuestListDaoImpl extends JdbcGenericDao implements GuestListDao {
 	public int addGuests(AddGuests addGuests) {
 		List<Guests> guests = getGuests();
 		int room = 0;
-		if (guests != null) {
+		if (!CollectionUtils.isEmpty(guests)) {
 			Collections.sort(guests, Comparator.comparing(Guests::getRoom).reversed());
+			if (guests.stream().anyMatch(g -> g.getName().equals(addGuests.getName()))) {
+				throw new InternalError("Guest Already Exists");
+			}
 			room = guests.get(0).getRoom() + 1;
 		}
 		Map<String, String> params = new HashMap<>();
@@ -79,5 +84,17 @@ public class GuestListDaoImpl extends JdbcGenericDao implements GuestListDao {
 		return getNamedParameterJdbcTemplate().update(
 				"update guests set name = :name, roomtype=:roomtype,address =:address,email =:email where room=:room",
 				params);
+	}
+
+	@Transactional
+	@Override
+	public int deleteGuests(String name) {
+		GuestsEntity guestsEntity = guestListRepo.findByName(name);
+		if (guestsEntity != null) {
+			guestListRepo.delete(guestsEntity);
+			return 1;
+		} else {
+			return 0;
+		}
 	}
 }

@@ -1,7 +1,8 @@
 const loginreducer = (login = false, action) => {
-  switch (action) {
-    case "login":
-      return true;
+  switch (action.type) {
+    case "login": {
+      return action.payload.status === 200;
+    }
     default:
       return false;
   }
