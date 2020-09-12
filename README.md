@@ -6,4 +6,4 @@ This project creates and edit a guest list of hotel .
 
 http://localhost:3000 to view front end after starting code in "frontend" folder with npm start.
 
-http://localhost:8080/swagger-ui.html# after starting backend .
+After starting spring boot project in backend , view apis in http://localhost:8080/swagger-ui.html#  .
