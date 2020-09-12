@@ -1,9 +1,9 @@
 package com.guestlist.guestlist_artifact.Model;
 
+import org.springframework.stereotype.Component;
+
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
-
-import org.springframework.stereotype.Component;
 
 @Component
 public class AddGuests {

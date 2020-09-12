@@ -1,7 +1,9 @@
-package com.guestlist.guestlist_artifact;
+package com.guestlist.guestlist_artifact.ServiceImpl;
 
 import java.util.List;
 
+import com.guestlist.guestlist_artifact.Dao.GuestListDao;
+import com.guestlist.guestlist_artifact.Service.GuestListService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,7 +12,7 @@ import com.guestlist.guestlist_artifact.Model.AddGuests;
 import com.guestlist.guestlist_artifact.Model.Guests;
 
 @Service
-public class GuestListServiceImpl implements GuestListService {
+public class 	GuestListServiceImpl implements GuestListService {
 
 	@Autowired
 	GuestListDao guestListDao;

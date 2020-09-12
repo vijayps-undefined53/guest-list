@@ -1,4 +1,4 @@
-package com.guestlist.guestlist_artifact;
+package com.guestlist.guestlist_artifact.Repo;
 
 import javax.sql.DataSource;
 
