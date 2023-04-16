@@ -19,6 +19,7 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
         cache: 'gradle'
-    - run: ./gradlew build --no-daemon
+    - run: gradle clean build
+    - working-directory: backend
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
