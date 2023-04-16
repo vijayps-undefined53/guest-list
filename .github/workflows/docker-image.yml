@@ -21,6 +21,5 @@ jobs:
         cache: 'gradle'
     - name: Gradle Build Action
       uses: gradle/gradle-build-action@v2.4.2
-    - working-directory: backend
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
