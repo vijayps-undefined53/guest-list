@@ -1,11 +1,17 @@
 package com.guestlist.guestlist_artifact.Model;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.springframework.stereotype.Component;
+
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 
-import org.springframework.stereotype.Component;
-
 @Component
+@NoArgsConstructor
+@Setter
+@Getter
 public class AddGuests {
 	@NotEmpty(message = "Guest's Name  shouldn't be Empty")
 	private String name;
@@ -24,84 +30,4 @@ public class AddGuests {
 		this.address = address;
 		this.email = email;
 	}
-
-	public AddGuests() {
-		super();
-	}
-
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * @param name
-	 *            the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	/**
-	 * @return the roomType
-	 */
-	public String getRoomType() {
-		return roomType;
-	}
-
-	/**
-	 * @param roomType
-	 *            the roomType to set
-	 */
-	public void setRoomType(String roomType) {
-		this.roomType = roomType;
-	}
-
-	/**
-	 * @return the address
-	 */
-	public String getAddress() {
-		return address;
-	}
-
-	/**
-	 * @param address
-	 *            the address to set
-	 */
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	/**
-	 * @return the email
-	 */
-	public String getEmail() {
-		return email;
-	}
-
-	/**
-	 * @param email
-	 *            the email to set
-	 */
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	/**
-	 * @return the room
-	 */
-	public Integer getRoom() {
-		return room;
-	}
-
-	/**
-	 * @param room
-	 *            the room to set
-	 */
-	public void setRoom(Integer room) {
-		this.room = room;
-	}
-
 }

@@ -1,4 +1,4 @@
-package com.guestlist.guestlist_artifact;
+package com.guestlist.guestlist_artifact.Repo;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
