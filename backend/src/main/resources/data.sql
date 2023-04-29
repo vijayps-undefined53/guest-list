@@ -1,12 +1,12 @@
 
--- CREATE TABLE guests (
---   id INT AUTO_INCREMENT  PRIMARY KEY,
---   name VARCHAR(250) NOT NULL,
---   room INT NOT NULL,
---   roomtype  VARCHAR(250) NOT NULL,
---   address  VARCHAR(250) NOT NULL,
---   email  VARCHAR(250) NOT NULL
--- );
+ CREATE TABLE IF NOT EXISTS guests (
+   id INT AUTO_INCREMENT  PRIMARY KEY,
+   name VARCHAR(250) NOT NULL,
+   room INT NOT NULL,
+   roomtype  VARCHAR(250) NOT NULL,
+   address  VARCHAR(250) NOT NULL,
+   email  VARCHAR(250) NOT NULL
+ ) ;
 
 
 INSERT INTO guests (name, room,roomtype,address,email) VALUES('vijay', 100,'deluxe','ker','c@gmail.com');
