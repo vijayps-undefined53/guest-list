@@ -5,6 +5,7 @@ import com.guestlist.guestlist_artifact.Model.Guests;
 import com.guestlist.guestlist_artifact.Service.GuestListService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.CollectionUtils;
@@ -17,6 +18,7 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @Slf4j
+@Profile("!test")
 public class GuestListController {
 	@Autowired
 	private GuestListService guestListService;
@@ -43,8 +45,8 @@ public class GuestListController {
 		log.info("addguests Api ");
 		int add = guestListService.addGuests(addGuests);
 		log.info("Successfully added guests  ");
-		return add == 1 ? new ResponseEntity<Boolean>(HttpStatus.OK)
-				: new ResponseEntity<Boolean>(HttpStatus.INTERNAL_SERVER_ERROR);
+		return add == 1 ? new ResponseEntity<>(HttpStatus.OK)
+				: new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
 	@RequestMapping(value = "/updateguests", method = RequestMethod.POST, produces = "application/json")

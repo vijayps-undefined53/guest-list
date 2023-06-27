@@ -1,0 +1,464 @@
+29-04-2023 13:31:29 INFO  Version:21 - HV000001: Hibernate Validator 6.1.5.Final
+29-04-2023 13:31:30 INFO  GuestlistArtifactApplication:55 - Starting GuestlistArtifactApplication on Vijays-MacBook-Air.local with PID 4153 (/Users/vijayps/PTwo/FullStack/guest-list/backend/build/classes/java/main started by vijayps in /Users/vijayps/PTwo/FullStack/guest-list/backend)
+29-04-2023 13:31:30 INFO  GuestlistArtifactApplication:651 - No active profile set, falling back to default profiles: default
+29-04-2023 13:31:32 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+29-04-2023 13:31:32 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+29-04-2023 13:31:32 INFO  RepositoryConfigurationExtensionSupport:348 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.guestlist.guestlist_artifact.Repo.GuestListRepo. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+29-04-2023 13:31:32 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 97ms. Found 0 JDBC repository interfaces.
+29-04-2023 13:31:32 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+29-04-2023 13:31:32 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+29-04-2023 13:31:32 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 52ms. Found 1 JPA repository interfaces.
+29-04-2023 13:31:34 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+29-04-2023 13:31:34 INFO  ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 4463 ms
+29-04-2023 13:31:35 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+29-04-2023 13:31:35 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+29-04-2023 13:31:35 INFO  H2ConsoleAutoConfiguration:74 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+29-04-2023 13:31:36 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+29-04-2023 13:31:36 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+29-04-2023 13:31:36 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.20.Final
+29-04-2023 13:31:37 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+29-04-2023 13:31:37 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+29-04-2023 13:31:37 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+29-04-2023 13:31:37 INFO  Dialect:170 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+29-04-2023 13:31:37 INFO  WelcomePageHandlerMapping:54 - Adding welcome page: class path resource [static/index.html]
+29-04-2023 13:31:38 WARN  AnnotationConfigServletWebServerApplicationContext:559 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+29-04-2023 13:31:38 INFO  LocalContainerEntityManagerFactoryBean:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+29-04-2023 13:31:39 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+29-04-2023 13:31:39 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+29-04-2023 13:31:39 INFO  SchemaDropperImpl$DelayedDropActionImpl:526 - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+29-04-2023 13:31:39 INFO  ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+29-04-2023 13:31:39 INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+29-04-2023 13:31:39 INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+29-04-2023 13:31:39 INFO  ConditionEvaluationReportLoggingListener:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+29-04-2023 13:31:39 ERROR LoggingFailureAnalysisReporter:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+29-04-2023 13:32:25 INFO  Version:21 - HV000001: Hibernate Validator 6.1.5.Final
+29-04-2023 13:32:25 INFO  GuestlistArtifactApplication:55 - Starting GuestlistArtifactApplication on Vijays-MacBook-Air.local with PID 4181 (/Users/vijayps/PTwo/FullStack/guest-list/backend/build/classes/java/main started by vijayps in /Users/vijayps/PTwo/FullStack/guest-list/backend)
+29-04-2023 13:32:25 INFO  GuestlistArtifactApplication:651 - No active profile set, falling back to default profiles: default
+29-04-2023 13:32:27 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+29-04-2023 13:32:27 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+29-04-2023 13:32:27 INFO  RepositoryConfigurationExtensionSupport:348 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.guestlist.guestlist_artifact.Repo.GuestListRepo. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+29-04-2023 13:32:27 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 68ms. Found 0 JDBC repository interfaces.
+29-04-2023 13:32:27 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+29-04-2023 13:32:27 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+29-04-2023 13:32:27 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 47ms. Found 1 JPA repository interfaces.
+29-04-2023 13:32:29 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+29-04-2023 13:32:29 INFO  ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 3244 ms
+29-04-2023 13:32:29 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+29-04-2023 13:32:29 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+29-04-2023 13:32:29 INFO  H2ConsoleAutoConfiguration:74 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+29-04-2023 13:32:30 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+29-04-2023 13:32:30 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+29-04-2023 13:32:30 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.20.Final
+29-04-2023 13:32:30 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+29-04-2023 13:32:31 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+29-04-2023 13:32:31 INFO  Dialect:170 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+29-04-2023 13:32:31 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+29-04-2023 13:32:32 INFO  WelcomePageHandlerMapping:54 - Adding welcome page: class path resource [static/index.html]
+29-04-2023 13:32:32 WARN  AnnotationConfigServletWebServerApplicationContext:559 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+29-04-2023 13:32:32 INFO  LocalContainerEntityManagerFactoryBean:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+29-04-2023 13:32:33 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+29-04-2023 13:32:33 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+29-04-2023 13:32:33 INFO  SchemaDropperImpl$DelayedDropActionImpl:526 - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+29-04-2023 13:32:33 INFO  ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+29-04-2023 13:32:33 INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+29-04-2023 13:32:33 INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+29-04-2023 13:32:33 INFO  ConditionEvaluationReportLoggingListener:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+29-04-2023 13:32:33 ERROR LoggingFailureAnalysisReporter:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+29-04-2023 13:32:51 INFO  Version:21 - HV000001: Hibernate Validator 6.1.5.Final
+29-04-2023 13:32:52 INFO  GuestlistArtifactApplication:55 - Starting GuestlistArtifactApplication on Vijays-MacBook-Air.local with PID 4191 (/Users/vijayps/PTwo/FullStack/guest-list/backend/build/classes/java/main started by vijayps in /Users/vijayps/PTwo/FullStack/guest-list/backend)
+29-04-2023 13:32:52 INFO  GuestlistArtifactApplication:651 - No active profile set, falling back to default profiles: default
+29-04-2023 13:32:53 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+29-04-2023 13:32:53 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+29-04-2023 13:32:53 INFO  RepositoryConfigurationExtensionSupport:348 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.guestlist.guestlist_artifact.Repo.GuestListRepo. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+29-04-2023 13:32:53 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 67ms. Found 0 JDBC repository interfaces.
+29-04-2023 13:32:53 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+29-04-2023 13:32:53 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+29-04-2023 13:32:53 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 45ms. Found 1 JPA repository interfaces.
+29-04-2023 13:32:54 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+29-04-2023 13:32:55 INFO  ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 3023 ms
+29-04-2023 13:32:55 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+29-04-2023 13:32:55 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+29-04-2023 13:32:55 INFO  H2ConsoleAutoConfiguration:74 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+29-04-2023 13:32:56 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+29-04-2023 13:32:56 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+29-04-2023 13:32:56 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.20.Final
+29-04-2023 13:32:56 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+29-04-2023 13:32:56 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+29-04-2023 13:32:56 INFO  Dialect:170 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+29-04-2023 13:32:57 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+29-04-2023 13:32:57 INFO  WelcomePageHandlerMapping:54 - Adding welcome page: class path resource [static/index.html]
+29-04-2023 13:32:57 WARN  AnnotationConfigServletWebServerApplicationContext:559 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+29-04-2023 13:32:58 INFO  LocalContainerEntityManagerFactoryBean:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+29-04-2023 13:32:58 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+29-04-2023 13:32:58 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+29-04-2023 13:32:58 INFO  SchemaDropperImpl$DelayedDropActionImpl:526 - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+29-04-2023 13:32:58 INFO  ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+29-04-2023 13:32:58 INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+29-04-2023 13:32:58 INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+29-04-2023 13:32:58 INFO  ConditionEvaluationReportLoggingListener:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+29-04-2023 13:32:58 ERROR LoggingFailureAnalysisReporter:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+29-04-2023 13:34:08 INFO  Version:21 - HV000001: Hibernate Validator 6.1.5.Final
+29-04-2023 13:34:08 INFO  GuestlistArtifactApplication:55 - Starting GuestlistArtifactApplication on Vijays-MacBook-Air.local with PID 4226 (/Users/vijayps/PTwo/FullStack/guest-list/backend/build/classes/java/main started by vijayps in /Users/vijayps/PTwo/FullStack/guest-list/backend)
+29-04-2023 13:34:08 INFO  GuestlistArtifactApplication:651 - No active profile set, falling back to default profiles: default
+29-04-2023 13:34:09 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+29-04-2023 13:34:09 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+29-04-2023 13:34:09 INFO  RepositoryConfigurationExtensionSupport:348 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.guestlist.guestlist_artifact.Repo.GuestListRepo. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+29-04-2023 13:34:09 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 61ms. Found 0 JDBC repository interfaces.
+29-04-2023 13:34:10 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+29-04-2023 13:34:10 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+29-04-2023 13:34:10 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 46ms. Found 1 JPA repository interfaces.
+29-04-2023 13:34:11 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+29-04-2023 13:34:11 INFO  ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 2811 ms
+29-04-2023 13:34:11 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+29-04-2023 13:34:11 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+29-04-2023 13:34:11 INFO  H2ConsoleAutoConfiguration:74 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+29-04-2023 13:34:12 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+29-04-2023 13:34:12 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+29-04-2023 13:34:12 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.20.Final
+29-04-2023 13:34:12 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+29-04-2023 13:34:12 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+29-04-2023 13:34:12 INFO  Dialect:170 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+29-04-2023 13:34:13 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+29-04-2023 13:34:13 INFO  WelcomePageHandlerMapping:54 - Adding welcome page: class path resource [static/index.html]
+29-04-2023 13:34:13 WARN  AnnotationConfigServletWebServerApplicationContext:559 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+29-04-2023 13:34:13 INFO  LocalContainerEntityManagerFactoryBean:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+29-04-2023 13:34:14 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+29-04-2023 13:34:14 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+29-04-2023 13:34:14 INFO  SchemaDropperImpl$DelayedDropActionImpl:526 - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+29-04-2023 13:34:14 INFO  ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+29-04-2023 13:34:14 INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+29-04-2023 13:34:14 INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+29-04-2023 13:34:14 INFO  ConditionEvaluationReportLoggingListener:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+29-04-2023 13:34:14 ERROR LoggingFailureAnalysisReporter:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+29-04-2023 13:34:40 INFO  Version:21 - HV000001: Hibernate Validator 6.1.5.Final
+29-04-2023 13:34:40 INFO  GuestlistArtifactApplication:55 - Starting GuestlistArtifactApplication on Vijays-MacBook-Air.local with PID 4242 (/Users/vijayps/PTwo/FullStack/guest-list/backend/build/classes/java/main started by vijayps in /Users/vijayps/PTwo/FullStack/guest-list/backend)
+29-04-2023 13:34:40 INFO  GuestlistArtifactApplication:651 - No active profile set, falling back to default profiles: default
+29-04-2023 13:34:42 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+29-04-2023 13:34:42 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+29-04-2023 13:34:42 INFO  RepositoryConfigurationExtensionSupport:348 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.guestlist.guestlist_artifact.Repo.GuestListRepo. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+29-04-2023 13:34:42 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 60ms. Found 0 JDBC repository interfaces.
+29-04-2023 13:34:42 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+29-04-2023 13:34:42 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+29-04-2023 13:34:42 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 47ms. Found 1 JPA repository interfaces.
+29-04-2023 13:34:43 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+29-04-2023 13:34:43 INFO  ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 2964 ms
+29-04-2023 13:34:43 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+29-04-2023 13:34:44 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+29-04-2023 13:34:44 INFO  H2ConsoleAutoConfiguration:74 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+29-04-2023 13:34:44 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+29-04-2023 13:34:44 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+29-04-2023 13:34:44 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.20.Final
+29-04-2023 13:34:45 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+29-04-2023 13:34:45 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+29-04-2023 13:34:45 INFO  Dialect:170 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+29-04-2023 13:34:45 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+29-04-2023 13:34:45 INFO  WelcomePageHandlerMapping:54 - Adding welcome page: class path resource [static/index.html]
+29-04-2023 13:34:46 WARN  AnnotationConfigServletWebServerApplicationContext:559 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+29-04-2023 13:34:46 INFO  LocalContainerEntityManagerFactoryBean:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+29-04-2023 13:34:46 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+29-04-2023 13:34:46 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+29-04-2023 13:34:46 INFO  SchemaDropperImpl$DelayedDropActionImpl:526 - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+29-04-2023 13:34:47 INFO  ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+29-04-2023 13:34:47 INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+29-04-2023 13:34:47 INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+29-04-2023 13:34:47 INFO  ConditionEvaluationReportLoggingListener:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+29-04-2023 13:34:47 ERROR LoggingFailureAnalysisReporter:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+29-04-2023 13:36:40 INFO  Version:21 - HV000001: Hibernate Validator 6.1.5.Final
+29-04-2023 13:36:41 INFO  GuestlistArtifactApplication:55 - Starting GuestlistArtifactApplication on Vijays-MacBook-Air.local with PID 4347 (/Users/vijayps/PTwo/FullStack/guest-list/backend/build/classes/java/main started by vijayps in /Users/vijayps/PTwo/FullStack/guest-list/backend)
+29-04-2023 13:36:41 INFO  GuestlistArtifactApplication:651 - No active profile set, falling back to default profiles: default
+29-04-2023 13:36:42 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+29-04-2023 13:36:42 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+29-04-2023 13:36:43 INFO  RepositoryConfigurationExtensionSupport:348 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.guestlist.guestlist_artifact.Repo.GuestListRepo. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+29-04-2023 13:36:43 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 85ms. Found 0 JDBC repository interfaces.
+29-04-2023 13:36:43 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+29-04-2023 13:36:43 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+29-04-2023 13:36:43 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 54ms. Found 1 JPA repository interfaces.
+29-04-2023 13:36:44 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+29-04-2023 13:36:44 INFO  ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 3171 ms
+29-04-2023 13:36:44 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+29-04-2023 13:36:45 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+29-04-2023 13:36:45 INFO  H2ConsoleAutoConfiguration:74 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+29-04-2023 13:36:45 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+29-04-2023 13:36:45 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+29-04-2023 13:36:45 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.20.Final
+29-04-2023 13:36:45 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+29-04-2023 13:36:46 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+29-04-2023 13:36:46 INFO  Dialect:170 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+29-04-2023 13:36:46 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+29-04-2023 13:36:46 INFO  WelcomePageHandlerMapping:54 - Adding welcome page: class path resource [static/index.html]
+29-04-2023 13:36:47 INFO  TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path ''
+29-04-2023 13:36:47 INFO  DocumentationPluginsBootstrapper:160 - Context refreshed
+29-04-2023 13:36:47 INFO  DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+29-04-2023 13:36:47 INFO  ApiListingReferenceScanner:41 - Scanning for api listing references
+29-04-2023 13:36:48 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+29-04-2023 13:36:48 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+29-04-2023 13:36:48 INFO  DeferredRepositoryInitializationListener:49 - Triggering deferred initialization of Spring Data repositories…
+29-04-2023 13:36:49 INFO  DeferredRepositoryInitializationListener:53 - Spring Data repositories initialized!
+29-04-2023 13:36:49 INFO  GuestlistArtifactApplication:61 - Started GuestlistArtifactApplication in 8.814 seconds (JVM running for 9.672)
+29-04-2023 13:37:04 INFO  LocalContainerEntityManagerFactoryBean:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+29-04-2023 13:37:04 INFO  SchemaDropperImpl$DelayedDropActionImpl:526 - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+29-04-2023 13:37:04 INFO  ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+29-04-2023 13:37:04 INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+29-04-2023 13:37:04 INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+29-04-2023 13:37:11 INFO  Version:21 - HV000001: Hibernate Validator 6.1.5.Final
+29-04-2023 13:37:11 INFO  GuestlistArtifactApplication:55 - Starting GuestlistArtifactApplication on Vijays-MacBook-Air.local with PID 4361 (/Users/vijayps/PTwo/FullStack/guest-list/backend/build/classes/java/main started by vijayps in /Users/vijayps/PTwo/FullStack/guest-list/backend)
+29-04-2023 13:37:11 INFO  GuestlistArtifactApplication:651 - No active profile set, falling back to default profiles: default
+29-04-2023 13:37:13 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+29-04-2023 13:37:13 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+29-04-2023 13:37:13 INFO  RepositoryConfigurationExtensionSupport:348 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.guestlist.guestlist_artifact.Repo.GuestListRepo. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+29-04-2023 13:37:13 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 62ms. Found 0 JDBC repository interfaces.
+29-04-2023 13:37:13 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+29-04-2023 13:37:13 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+29-04-2023 13:37:13 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 51ms. Found 1 JPA repository interfaces.
+29-04-2023 13:37:15 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+29-04-2023 13:37:15 INFO  ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 3418 ms
+29-04-2023 13:37:15 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+29-04-2023 13:37:16 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+29-04-2023 13:37:16 INFO  H2ConsoleAutoConfiguration:74 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+29-04-2023 13:37:16 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+29-04-2023 13:37:16 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+29-04-2023 13:37:16 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.20.Final
+29-04-2023 13:37:16 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+29-04-2023 13:37:17 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+29-04-2023 13:37:17 INFO  Dialect:170 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+29-04-2023 13:37:17 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+29-04-2023 13:37:17 INFO  WelcomePageHandlerMapping:54 - Adding welcome page: class path resource [static/index.html]
+29-04-2023 13:37:18 INFO  TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path ''
+29-04-2023 13:37:18 INFO  DocumentationPluginsBootstrapper:160 - Context refreshed
+29-04-2023 13:37:18 INFO  DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+29-04-2023 13:37:18 INFO  ApiListingReferenceScanner:41 - Scanning for api listing references
+29-04-2023 13:37:19 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+29-04-2023 13:37:19 INFO  DeferredRepositoryInitializationListener:49 - Triggering deferred initialization of Spring Data repositories…
+29-04-2023 13:37:19 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+29-04-2023 13:37:20 INFO  DeferredRepositoryInitializationListener:53 - Spring Data repositories initialized!
+29-04-2023 13:37:20 INFO  GuestlistArtifactApplication:61 - Started GuestlistArtifactApplication in 9.141 seconds (JVM running for 9.679)
+29-04-2023 13:38:03 INFO  LocalContainerEntityManagerFactoryBean:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+29-04-2023 13:38:03 INFO  SchemaDropperImpl$DelayedDropActionImpl:526 - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+29-04-2023 13:38:03 INFO  ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+29-04-2023 13:38:03 INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+29-04-2023 13:38:03 INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+29-04-2023 13:38:08 INFO  Version:21 - HV000001: Hibernate Validator 6.1.5.Final
+29-04-2023 13:38:08 INFO  GuestlistArtifactApplication:55 - Starting GuestlistArtifactApplication on Vijays-MacBook-Air.local with PID 4385 (/Users/vijayps/PTwo/FullStack/guest-list/backend/build/classes/java/main started by vijayps in /Users/vijayps/PTwo/FullStack/guest-list/backend)
+29-04-2023 13:38:08 INFO  GuestlistArtifactApplication:651 - No active profile set, falling back to default profiles: default
+29-04-2023 13:38:10 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+29-04-2023 13:38:10 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+29-04-2023 13:38:10 INFO  RepositoryConfigurationExtensionSupport:348 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.guestlist.guestlist_artifact.Repo.GuestListRepo. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+29-04-2023 13:38:10 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 72ms. Found 0 JDBC repository interfaces.
+29-04-2023 13:38:10 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+29-04-2023 13:38:10 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+29-04-2023 13:38:10 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 40ms. Found 1 JPA repository interfaces.
+29-04-2023 13:38:11 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+29-04-2023 13:38:11 INFO  ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 3026 ms
+29-04-2023 13:38:12 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+29-04-2023 13:38:12 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+29-04-2023 13:38:12 INFO  H2ConsoleAutoConfiguration:74 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+29-04-2023 13:38:12 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+29-04-2023 13:38:12 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+29-04-2023 13:38:12 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.20.Final
+29-04-2023 13:38:13 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+29-04-2023 13:38:13 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+29-04-2023 13:38:13 INFO  Dialect:170 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+29-04-2023 13:38:13 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+29-04-2023 13:38:14 INFO  WelcomePageHandlerMapping:54 - Adding welcome page: class path resource [static/index.html]
+29-04-2023 13:38:14 INFO  TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path ''
+29-04-2023 13:38:14 INFO  DocumentationPluginsBootstrapper:160 - Context refreshed
+29-04-2023 13:38:14 INFO  DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+29-04-2023 13:38:14 INFO  ApiListingReferenceScanner:41 - Scanning for api listing references
+29-04-2023 13:38:15 INFO  DeferredRepositoryInitializationListener:49 - Triggering deferred initialization of Spring Data repositories…
+29-04-2023 13:38:15 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+29-04-2023 13:38:15 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+29-04-2023 13:38:16 INFO  DeferredRepositoryInitializationListener:53 - Spring Data repositories initialized!
+29-04-2023 13:38:16 INFO  GuestlistArtifactApplication:61 - Started GuestlistArtifactApplication in 7.819 seconds (JVM running for 8.37)
+29-04-2023 13:38:35 INFO  DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+29-04-2023 13:38:35 INFO  DispatcherServlet:547 - Completed initialization in 17 ms
+29-04-2023 13:43:35 INFO  GuestListController:26 - Arrivals Api , to get list of guest arriving 
+29-04-2023 15:05:01 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=41m48s55ms).
+29-04-2023 16:13:47 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m15s334ms).
+29-04-2023 16:43:08 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=28m50s949ms).
+29-04-2023 16:51:01 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m52s883ms).
+29-04-2023 17:08:45 INFO  LocalContainerEntityManagerFactoryBean:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+29-04-2023 17:08:45 INFO  SchemaDropperImpl$DelayedDropActionImpl:526 - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+29-04-2023 17:08:45 INFO  ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+29-04-2023 17:08:45 INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+29-04-2023 17:08:45 INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+08-05-2023 23:28:02 INFO  Version:21 - HV000001: Hibernate Validator 6.1.5.Final
+08-05-2023 23:28:03 INFO  GuestlistArtifactApplication:55 - Starting GuestlistArtifactApplication on Vijays-MacBook-Air.local with PID 22059 (/Users/vijayps/PTwo/FullStack/guest-list/backend/build/classes/java/main started by vijayps in /Users/vijayps/PTwo/FullStack/guest-list/backend)
+08-05-2023 23:28:03 INFO  GuestlistArtifactApplication:651 - No active profile set, falling back to default profiles: default
+08-05-2023 23:28:05 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+08-05-2023 23:28:05 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+08-05-2023 23:28:05 INFO  RepositoryConfigurationExtensionSupport:348 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.guestlist.guestlist_artifact.Repo.GuestListRepo. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+08-05-2023 23:28:05 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 104ms. Found 0 JDBC repository interfaces.
+08-05-2023 23:28:05 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+08-05-2023 23:28:05 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+08-05-2023 23:28:05 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 61ms. Found 1 JPA repository interfaces.
+08-05-2023 23:28:07 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+08-05-2023 23:28:07 INFO  ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 3933 ms
+08-05-2023 23:28:07 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+08-05-2023 23:28:08 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+08-05-2023 23:28:08 INFO  H2ConsoleAutoConfiguration:74 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+08-05-2023 23:28:08 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+08-05-2023 23:28:08 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+08-05-2023 23:28:08 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.20.Final
+08-05-2023 23:28:09 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08-05-2023 23:28:09 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+08-05-2023 23:28:09 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+08-05-2023 23:28:09 INFO  Dialect:170 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+08-05-2023 23:28:10 INFO  WelcomePageHandlerMapping:54 - Adding welcome page: class path resource [static/index.html]
+08-05-2023 23:28:10 INFO  TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path ''
+08-05-2023 23:28:10 INFO  DocumentationPluginsBootstrapper:160 - Context refreshed
+08-05-2023 23:28:10 INFO  DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+08-05-2023 23:28:10 INFO  ApiListingReferenceScanner:41 - Scanning for api listing references
+08-05-2023 23:28:11 INFO  DeferredRepositoryInitializationListener:49 - Triggering deferred initialization of Spring Data repositories…
+08-05-2023 23:28:12 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 23:28:12 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08-05-2023 23:28:12 INFO  DeferredRepositoryInitializationListener:53 - Spring Data repositories initialized!
+08-05-2023 23:28:12 INFO  GuestlistArtifactApplication:61 - Started GuestlistArtifactApplication in 10.502 seconds (JVM running for 11.219)
+08-05-2023 23:28:48 INFO  DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+08-05-2023 23:28:48 INFO  DispatcherServlet:547 - Completed initialization in 20 ms
+08-05-2023 23:31:54 INFO  LocalContainerEntityManagerFactoryBean:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+08-05-2023 23:31:54 INFO  SchemaDropperImpl$DelayedDropActionImpl:526 - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+08-05-2023 23:31:54 INFO  ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+08-05-2023 23:31:54 INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+08-05-2023 23:31:54 INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+08-05-2023 23:32:41 INFO  Version:21 - HV000001: Hibernate Validator 6.1.5.Final
+08-05-2023 23:32:42 INFO  GuestlistArtifactApplication:55 - Starting GuestlistArtifactApplication on Vijays-MacBook-Air.local with PID 22117 (/Users/vijayps/PTwo/FullStack/guest-list/backend/build/classes/java/main started by vijayps in /Users/vijayps/PTwo/FullStack/guest-list/backend)
+08-05-2023 23:32:42 INFO  GuestlistArtifactApplication:651 - No active profile set, falling back to default profiles: default
+08-05-2023 23:32:45 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+08-05-2023 23:32:45 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+08-05-2023 23:32:45 INFO  RepositoryConfigurationExtensionSupport:348 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.guestlist.guestlist_artifact.Repo.GuestListRepo. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+08-05-2023 23:32:45 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 118ms. Found 0 JDBC repository interfaces.
+08-05-2023 23:32:45 INFO  RepositoryConfigurationDelegate:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+08-05-2023 23:32:45 INFO  RepositoryConfigurationDelegate:127 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+08-05-2023 23:32:45 INFO  RepositoryConfigurationDelegate:187 - Finished Spring Data repository scanning in 58ms. Found 1 JPA repository interfaces.
+08-05-2023 23:32:46 INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+08-05-2023 23:32:47 INFO  ServletWebServerApplicationContext:285 - Root WebApplicationContext: initialization completed in 4844 ms
+08-05-2023 23:32:47 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+08-05-2023 23:32:48 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+08-05-2023 23:32:48 INFO  H2ConsoleAutoConfiguration:74 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+08-05-2023 23:32:48 INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+08-05-2023 23:32:48 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+08-05-2023 23:32:48 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.20.Final
+08-05-2023 23:32:49 WARN  JpaBaseConfiguration$JpaWebConfiguration:220 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08-05-2023 23:32:49 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+08-05-2023 23:32:49 INFO  EndpointLinksResolver:58 - Exposing 2 endpoint(s) beneath base path '/actuator'
+08-05-2023 23:32:49 INFO  Dialect:170 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+08-05-2023 23:32:49 INFO  PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+08-05-2023 23:32:50 INFO  WelcomePageHandlerMapping:54 - Adding welcome page: class path resource [static/index.html]
+08-05-2023 23:32:51 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 23:32:51 INFO  LocalContainerEntityManagerFactoryBean:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08-05-2023 23:32:52 INFO  TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path ''
+08-05-2023 23:32:52 INFO  DocumentationPluginsBootstrapper:160 - Context refreshed
+08-05-2023 23:32:52 INFO  DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+08-05-2023 23:32:52 INFO  ApiListingReferenceScanner:41 - Scanning for api listing references
+08-05-2023 23:32:52 INFO  CachingOperationNameGenerator:40 - Generating unique operation named: handleUsingGET_1
+08-05-2023 23:32:52 INFO  CachingOperationNameGenerator:40 - Generating unique operation named: handleUsingGET_2
+08-05-2023 23:32:52 INFO  DeferredRepositoryInitializationListener:49 - Triggering deferred initialization of Spring Data repositories…
+08-05-2023 23:32:53 INFO  DeferredRepositoryInitializationListener:53 - Spring Data repositories initialized!
+08-05-2023 23:32:53 INFO  GuestlistArtifactApplication:61 - Started GuestlistArtifactApplication in 12.38 seconds (JVM running for 13.292)
+08-05-2023 23:33:16 INFO  DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+08-05-2023 23:33:16 INFO  DispatcherServlet:547 - Completed initialization in 63 ms
+09-05-2023 00:23:55 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m6s635ms).
+09-05-2023 07:11:43 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6h27m47s486ms).
+09-05-2023 07:15:16 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m33s474ms).
+09-05-2023 08:15:41 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=38m24s955ms).
+09-05-2023 08:32:13 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m1s941ms).
+09-05-2023 08:57:17 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m4s96ms).
+09-05-2023 09:08:10 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m22s574ms).
+09-05-2023 18:59:30 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9h50m50s596ms).
+09-05-2023 19:15:35 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m34s850ms).
+09-05-2023 19:41:46 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m10s801ms).
+09-05-2023 19:54:00 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m13s944ms).
+09-05-2023 19:54:49 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48s390ms).
+09-05-2023 21:33:05 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m15s965ms).
+09-05-2023 21:51:10 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m4s612ms).
+09-05-2023 22:20:40 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=29m300ms).
+09-05-2023 22:40:55 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m44s399ms).
+09-05-2023 23:11:53 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m57s828ms).
+09-05-2023 23:47:23 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m30s631ms).
+10-05-2023 00:03:42 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m18s193ms).
+10-05-2023 00:13:46 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m4s407ms).
+10-05-2023 00:29:24 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m38s343ms).
+10-05-2023 00:50:32 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m7s664ms).
+10-05-2023 07:38:40 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6h47m37s462ms).
+10-05-2023 08:51:17 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=22m6s350ms).
+10-05-2023 09:58:58 WARN  HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m10s420ms).
+10-05-2023 12:43:01 INFO  LocalContainerEntityManagerFactoryBean:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+10-05-2023 12:43:01 INFO  SchemaDropperImpl$DelayedDropActionImpl:526 - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+10-05-2023 12:43:02 INFO  ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+10-05-2023 12:43:02 INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+10-05-2023 12:43:02 INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.

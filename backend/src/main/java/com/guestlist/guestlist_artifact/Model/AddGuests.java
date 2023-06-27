@@ -7,13 +7,15 @@ import org.springframework.stereotype.Component;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
 
 @Component
 @NoArgsConstructor
 @Setter
 @Getter
 public class AddGuests {
-	@NotEmpty(message = "Guest's Name  shouldn't be Empty")
+	@Pattern(regexp = "[a-zA-Z]{2,12}$",
+			 message = "username must be of 2 to 12 length with no special characters or numbers")
 	private String name;
 	@NotEmpty(message = "Room Type  shouldn't be Empty")
 	private String roomType;

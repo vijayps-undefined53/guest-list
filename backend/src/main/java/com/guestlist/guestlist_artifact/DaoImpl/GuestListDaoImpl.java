@@ -12,6 +12,10 @@ import com.guestlist.guestlist_artifact.Repo.GuestListRepo;
 import com.guestlist.guestlist_artifact.Repo.GuestsEntity;
 import com.guestlist.guestlist_artifact.Repo.JdbcGenericDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
@@ -27,9 +31,15 @@ public class GuestListDaoImpl extends JdbcGenericDao implements GuestListDao {
 	@Override
 	public List<Guests> getGuests() {
 		List<Guests> guestlist = new ArrayList<>();
-		guestListRepo.findAll().forEach(g -> {
+		GuestsEntity guestByRoomType = guestListRepo.findTopByRoomtypeOrderByName("deluxe");
+		Pageable paging = PageRequest.of(0, 10,Sort.by(Sort.Direction.ASC,"email", "name"));
+		Page<GuestsEntity> sortByEmail = guestListRepo.findAll(paging);
+		sortByEmail.stream().forEach((g)->{
 			guestlist.add(new Guests(g.getName(), g.getRoom(), g.getRoomtype(), g.getAddress(), g.getEmail()));
 		});
+//		guestListRepo.findAllByOrderByNameDesc().forEach(g -> {
+//			guestlist.add(new Guests(g.getName(), g.getRoom(), g.getRoomtype(), g.getAddress(), g.getEmail()));
+//		});
 		return guestlist;
 		/*
 		 * Code below shows how to get all guests using jdbc template return
