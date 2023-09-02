@@ -2,19 +2,24 @@ plugins {
 	id 'org.springframework.boot' version '2.3.3.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
 	id 'java'
-	id 'war'
 }
 
 
 group = 'com.guestlist'
 version = '0.0.4-SNAPSHOT'
-sourceCompatibility = '1.8'
 
 configurations {
 	all*.exclude group:'org.springframework.boot',
 			module:'spring-boot-starter-logging'
 	compileOnly {
 		extendsFrom annotationProcessor
+	}
+}
+
+
+jar {
+	manifest {
+		attributes 'Main-Class': 'com.guestlist.guestlist_artifact.GuestlistArtifactApplication'
 	}
 }
 
@@ -29,13 +34,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-	compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
-	compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.5'
+	implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+	implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.5'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
-	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
-	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+	implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+	implementation 'org.springframework.boot:spring-boot-starter-tomcat'
 	runtimeOnly 'com.h2database:h2'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'

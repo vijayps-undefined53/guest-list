@@ -20,59 +20,83 @@ import java.util.List;
 @Slf4j
 @Profile("!test")
 public class GuestListController {
-	@Autowired
-	private GuestListService guestListService;
+    @Autowired
+    private GuestListService guestListService;
 
-	@RequestMapping(value = "/arrivals", method = RequestMethod.GET)
-	public ResponseEntity<List<Guests>> arrivals() {
-		log.info("Arrivals Api , to get list of guest arriving ");
-		List<Guests> arrivals = guestListService.arrivals();
-		if (!CollectionUtils.isEmpty(arrivals)) {
-			return new ResponseEntity<List<Guests>>(arrivals, HttpStatus.OK);
-		} else {
-			return new ResponseEntity<List<Guests>>(HttpStatus.NO_CONTENT);
-		}
-	}
+    @RequestMapping(value = "/arrivals",
+                    method = RequestMethod.GET)
+    public ResponseEntity<List<Guests>> arrivals() {
+        log.info("Arrivals Api , to get list of guest arriving ");
+        List<Guests> arrivals = guestListService.arrivals();
+        if (!CollectionUtils.isEmpty(arrivals)) {
+            return new ResponseEntity<>(arrivals, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+    }
 
-	@RequestMapping(value = "/prepare", method = RequestMethod.GET)
-	public ResponseEntity<Guests> prepare() {
-		log.info("Prepare Api ");
-		return new ResponseEntity<Guests>(HttpStatus.OK);
-	}
+    @RequestMapping(value = "/prepare",
+                    method = RequestMethod.GET)
+    public ResponseEntity<Guests> prepare() {
+        log.info("Prepare Api ");
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 
-	@RequestMapping(value = "/addguests", method = RequestMethod.POST, produces = "application/json")
-	public ResponseEntity<Boolean> addGuests(@Valid @NotNull @RequestBody AddGuests addGuests) {
-		log.info("addguests Api ");
-		int add = guestListService.addGuests(addGuests);
-		log.info("Successfully added guests  ");
-		return add == 1 ? new ResponseEntity<>(HttpStatus.OK)
-				: new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-	}
+    @RequestMapping(value = "/addguests",
+                    method = RequestMethod.POST,
+                    produces = "application/json")
+    public ResponseEntity<Boolean> addGuests(
+            @Valid
+            @NotNull
+            @RequestBody
+                    AddGuests addGuests) {
+        log.info("addguests Api ");
+        int add = guestListService.addGuests(addGuests);
+        log.info("Successfully added guests  ");
+        return add == 1 ? new ResponseEntity<>(HttpStatus.OK)
+                : new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 
-	@RequestMapping(value = "/updateguests", method = RequestMethod.POST, produces = "application/json")
-	public ResponseEntity<Boolean> updateGuests(@Valid @NotNull @RequestBody AddGuests addGuests) {
-		log.info("updateGuests Api ");
-		int addguests = guestListService.updateGuests(addGuests);
-		log.info("Successfully updated Guests  ");
-		return addguests == 1 ? new ResponseEntity<Boolean>(HttpStatus.OK)
-				: new ResponseEntity<Boolean>(HttpStatus.INTERNAL_SERVER_ERROR);
-	}
+    @RequestMapping(value = "/updateguests",
+                    method = RequestMethod.POST,
+                    produces = "application/json")
+    public ResponseEntity<Boolean> updateGuests(
+            @Valid
+            @NotNull
+            @RequestBody
+                    AddGuests addGuests) {
+        log.info("updateGuests Api ");
+        int addguests = guestListService.updateGuests(addGuests);
+        log.info("Successfully updated Guests  ");
+        return addguests == 1 ? new ResponseEntity<>(HttpStatus.OK)
+                : new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 
-	@RequestMapping(value = "/getGuestByName", method = RequestMethod.GET, produces = "application/json")
-	public ResponseEntity<Guests> getGuestByName(
-			@Valid @NotNull(message = "querying using name, name expected") @RequestParam String name) {
-		log.info("getGuestByName Api ");
-		Guests guest = guestListService.getGuestsByName(name);
-		log.info("Guest Retrieved");
-		return guest != null ? new ResponseEntity<Guests>(guest, HttpStatus.OK)
-				: new ResponseEntity<Guests>(HttpStatus.NO_CONTENT);
-	}
+    @RequestMapping(value = "/getGuestByName",
+                    method = RequestMethod.GET,
+                    produces = "application/json")
+    public ResponseEntity<Guests> getGuestByName(
+            @Valid
+            @NotNull(message = "querying using name, name expected")
+            @RequestParam
+                    String name) {
+        log.info("getGuestByName Api ");
+        Guests guest = guestListService.getGuestsByName(name);
+        log.info("Guest Retrieved");
+        return guest != null ? new ResponseEntity<>(guest, HttpStatus.OK)
+                : new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
 
-	@RequestMapping(value = "/deleteGuestByName", method = RequestMethod.DELETE, produces = "application/json")
-	public ResponseEntity<String> deleteGuestByName(
-			@Valid @NotNull(message = "delete using name, name expected") @RequestParam String name) {
-		int deleted = guestListService.deleteGuests(name);
-		return deleted == 1 ? new ResponseEntity<String>("Guest Deleted", HttpStatus.OK)
-				: new ResponseEntity<String>("No guest with this name found", HttpStatus.INTERNAL_SERVER_ERROR);
-	}
+    @RequestMapping(value = "/deleteGuestByName",
+                    method = RequestMethod.DELETE,
+                    produces = "application/json")
+    public ResponseEntity<String> deleteGuestByName(
+            @Valid
+            @NotNull(message = "delete using name, name expected")
+            @RequestParam
+                    String name) {
+        int deleted = guestListService.deleteGuests(name);
+        return deleted == 1 ? new ResponseEntity<>("Guest Deleted", HttpStatus.OK)
+                : new ResponseEntity<>("No guest with this name found", HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 }
